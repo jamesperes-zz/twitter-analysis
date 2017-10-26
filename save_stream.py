@@ -26,7 +26,7 @@ class StdOutListener(StreamListener):
         self.output.write(data + "\n")
         self.counter += 1
         #Change number for limit         
-        if self.counter >= 20:
+        if self.counter >= 20000:
             self.output.close()
             self.output = open('data/' + self.fprefix + '.' 
                                + time.strftime('%Y%m%d-%H%M%S') + '.json', 'w')
